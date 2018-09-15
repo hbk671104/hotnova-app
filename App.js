@@ -6,7 +6,7 @@
  * @flow
  */
 
-import React, { Component } from 'react';
+import * as React from 'react';
 import { Platform, StyleSheet, Text, View } from 'react-native';
 
 function multiply(n1: number, n2: number): number {
@@ -14,11 +14,12 @@ function multiply(n1: number, n2: number): number {
 }
 
 type Props = {};
-export default class App extends Component<Props> {
+
+export default class App extends React.Component<Props> {
 	render() {
 		return (
 			<View style={styles.container}>
-				<Text>{multiply(14, 'a')}</Text>
+				<Text>哈噶</Text>
 			</View>
 		);
 	}
