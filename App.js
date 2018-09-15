@@ -9,10 +9,6 @@
 import * as React from 'react';
 import { Platform, StyleSheet, Text, View } from 'react-native';
 
-function multiply(n1: number, n2: number): number {
-	return n1 * n2;
-}
-
 type Props = {};
 
 export default class App extends React.Component<Props> {
