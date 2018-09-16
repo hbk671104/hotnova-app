@@ -5,6 +5,7 @@ import { NavigationActions } from 'react-navigation'
 
 import styles from './style'
 
+@connect()
 class Login extends React.PureComponent {
 	handleLogin = () => {
 		this.props.dispatch(
@@ -23,4 +24,4 @@ class Login extends React.PureComponent {
 	}
 }
 
-export default connect()(Login)
+export default Login

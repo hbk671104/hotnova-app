@@ -17,6 +17,7 @@
 		"react-redux": "^5.0.7"
 	},
 	"devDependencies": {
+		"@babel/plugin-proposal-decorators": "^7.0.0",
 		"babel-jest": "23.6.0",
 		"flow-bin": "0.78",
 		"jest": "23.6.0",

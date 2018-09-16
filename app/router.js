@@ -50,6 +50,7 @@ function getActiveRouteName(navigationState) {
 	return route.routeName
 }
 
+@connect(({ router }) => ({ router }))
 class Router extends React.PureComponent {
 	componentWillMount() {
 		BackHandler.addEventListener('hardwareBackPress', this.backHandle)
@@ -80,4 +81,4 @@ class Router extends React.PureComponent {
 	}
 }
 
-export default connect(({ router }) => ({ router }))(Router)
+export default Router
