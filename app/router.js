@@ -14,15 +14,20 @@ import {
 import { connect } from 'react-redux'
 
 // Containers
-
 import Login from './container/auth/login'
+import Main from './container/main'
 
 const AuthStack = createStackNavigator({
 	Login,
 })
 
+const ContentStack = createStackNavigator({
+	Main,
+})
+
 const AppRouter = createSwitchNavigator({
 	Auth: AuthStack,
+	Content: ContentStack,
 })
 
 export const routerReducer = createNavigationReducer(AppRouter)
