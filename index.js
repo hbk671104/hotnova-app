@@ -14,7 +14,7 @@ const app = dva({
 	onAction: [routerMiddleware],
 	onError(e) {
 		console.log('onError', e)
-	},
+	}
 })
 
 const App = app.start(<Router />)

@@ -10,8 +10,8 @@ class Login extends React.PureComponent {
 	handleLogin = () => {
 		this.props.dispatch(
 			NavigationActions.navigate({
-				routeName: 'Content',
-			}),
+				routeName: 'Content'
+			})
 		)
 	}
 
