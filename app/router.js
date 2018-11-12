@@ -4,12 +4,12 @@ import {
 	createStackNavigator,
 	createBottomTabNavigator,
 	createSwitchNavigator,
-	NavigationActions,
+	NavigationActions
 } from 'react-navigation'
 import {
 	reduxifyNavigator,
 	createReactNavigationReduxMiddleware,
-	createNavigationReducer,
+	createNavigationReducer
 } from 'react-navigation-redux-helpers'
 import { connect } from 'react-redux'
 
@@ -18,23 +18,23 @@ import Login from './container/auth/login'
 import Main from './container/main'
 
 const AuthStack = createStackNavigator({
-	Login,
+	Login
 })
 
 const ContentStack = createStackNavigator({
-	Main,
+	Main
 })
 
 const AppRouter = createSwitchNavigator({
 	Auth: AuthStack,
-	Content: ContentStack,
+	Content: ContentStack
 })
 
 export const routerReducer = createNavigationReducer(AppRouter)
 
 export const routerMiddleware = createReactNavigationReduxMiddleware(
 	'root',
-	state => state.router,
+	state => state.router
 )
 
 const App = reduxifyNavigator(AppRouter, 'root')
@@ -66,7 +66,7 @@ class Router extends React.PureComponent {
 		if (subRouter.index === 0) {
 			Alert.alert('提示', '确认退出 Hotnova ？', [
 				{ text: '确认', onPress: () => BackHandler.exitApp() },
-				{ text: '取消', style: 'cancel' },
+				{ text: '取消', style: 'cancel' }
 			])
 		}
 
@@ -76,7 +76,6 @@ class Router extends React.PureComponent {
 
 	render() {
 		const { dispatch, router } = this.props
-
 		return <App dispatch={dispatch} state={router} />
 	}
 }
